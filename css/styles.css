@@ -9,6 +9,7 @@
 /* -------------Variables------------------ */
 /* Font*/
 /*Colors*/
+/* Ident */
 /* ---------------------------------------- */
 /* Common styles */
 body {
@@ -133,9 +134,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .header__list :nth-child(2) {
   margin-left: 87px;
@@ -224,4 +222,116 @@ body {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+/* Header section */
+/* Mobile styles */
+@media (max-width: 1200px) {
+  .header__list :nth-child(2) {
+    margin-left: 30px;
+  }
+  .header__list :nth-child(3) {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .header__container {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 10px;
+  }
+  .header__logo {
+    font-size: 20px;
+  }
+  .header__list {
+    display: block;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    background-color: #030033;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
+  .header__list :nth-child(2) {
+    margin-left: 0px;
+  }
+  .header__list :nth-child(3) {
+    margin-left: 0px;
+  }
+  .header__item {
+    padding: 10px;
+  }
+  .header__item :before,
+.header__item :after {
+    display: none;
+  }
+  .header__link {
+    font-size: 16px;
+    color: #fff;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header-burger {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+  }
+  .header-burger ::before,
+.header-burger ::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #030033;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .header-burger ::before {
+    bottom: 10px;
+  }
+  .header-burger ::after {
+    top: 10px;
+  }
+  .close {
+    position: absolute;
+    right: 20px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #030033;
+  }
+}
+.close.active::before {
+  bottom: -20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.close.active::after {
+  top: 20px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.close.active {
+  width: 0;
+}
+
+.header__list.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
