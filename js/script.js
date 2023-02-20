@@ -1,3 +1,4 @@
+// Burger menu
 const iconBurger = document.querySelector('.header-burger');
 const menu = document.querySelector('.header__list');
 const closeMenu = document.querySelector('.close');
