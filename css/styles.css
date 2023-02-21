@@ -342,6 +342,14 @@ body {
   background-color: #0e204e;
 }
 
+.img-mobile {
+  display: none;
+}
+
+.btn-mobile {
+  display: none;
+}
+
 /* Hero section */
 /* Mobile styles */
 @media (max-width: 1200px) {
@@ -378,8 +386,9 @@ body {
   }
   .hero__img {
     -webkit-mask-position-x: 640px;
-    -o-object-fit: fill;
-       object-fit: fill;
+  }
+  .hero-container {
+    height: 100%;
   }
   .hero-desc {
     top: 20%;
@@ -396,15 +405,36 @@ body {
     text-align: center;
     font-size: 14px;
   }
+  .hero__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .hero-desc {
     top: 10%;
   }
 }
 @media (max-width: 400px) {
+  .hero__text {
+    margin-bottom: 32px;
+  }
   .hero__img {
-    height: 400px;
+    display: none;
   }
   .hero-desc {
     top: 25%;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .btn-mobile {
+    margin: 0px auto;
+    padding: 10px 19px;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: #0e204e;
+    border: none;
+    border-radius: 5px;
   }
 }
