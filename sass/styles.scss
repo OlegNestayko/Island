@@ -37,6 +37,11 @@ $ident_50: 50px;
 
 /* ---------------------------------------- */
 /* Common styles */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $main-ff;
   font-weight: $main-fw;
@@ -231,8 +236,6 @@ body {
         margin-left: $ident_30;
         margin-right: $ident_30;
       }
-    }
-    &__btn {
     }
   }
 }
